@@ -29,7 +29,7 @@ function getRandomNumber (min, max, symbols) {
 }
 */
 
-function getRandomNumberVar (min, max, symbols) {
+function getRandomNumber (min, max, symbols) {
   if (min>=max) {
     return 'Второе число должно быть больше первого.';
   }
@@ -37,10 +37,10 @@ function getRandomNumberVar (min, max, symbols) {
     return 'Число должно быть больше 0.';
   }
   else {
-    let number = min + (max - min +1) * Math.random ();
-    let factor = Math.pow (10, symbols);
+    const number = min + (max - min +1) * Math.random ();
+    const factor = Math.pow (10, symbols);
     return Math.floor(number * factor)/factor;
     //return (Math.floor(number * factor) + Math.floor(number * factor - Math.floor(number * factor))) / factor;
-    }
+  }
 }
 getRandomNumber();
