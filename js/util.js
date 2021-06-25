@@ -35,23 +35,4 @@ const createRandomArray = (array) => {
   return arrayFiltered;
 };
 
-const createAuthor = () => {
-  const userId = getRandomInteger(1, 10);
-  if (userId < 10) {
-    return {
-      avatar: `img/avatars/user0${userId}.png`,
-    };
-  }
-  else {
-    return {
-      avatar: `img/avatars/user${userId}.png`,
-    };
-  }
-};
-
-const createLocation = () => ({
-  lat: getRandomNumber (35.65000, 35.70000, 5),
-  lng: getRandomNumber (139.70000, 139.80000, 5),
-});
-
-export {getRandomInteger, getRandomArrayElement, createRandomArray, createAuthor, createLocation};
+export {getRandomInteger, getRandomNumber, getRandomArrayElement, createRandomArray};
